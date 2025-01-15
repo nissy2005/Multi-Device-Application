@@ -1,0 +1,156 @@
+/* Import Lobster font for the logo */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* General Styling */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: center; /* Center the navbar links */
+  align-items: center;
+  background-color: #231651;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar Logo Styling */
+.logo {
+  font-size: 24px;
+  font-family: 'Lobster', cursive; /* Apply the Lobster font */
+  color: white;
+  position: absolute;
+  left: 20px; /* Logo aligned to the left */
+}
+
+/* Navbar Links Styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: #4DCCBD;
+}
+
+/* Sign In Button Styling */
+.sign-in {
+  position: absolute;
+  right: 50px; /* Align the Sign In button to the right */
+}
+
+.sign-in-btn {
+  background-color: #070410; /* Dark blue color for the button */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.sign-in-btn:hover {
+  background-color: #4DCCBD; /* Hover effect with your brand color */
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 80px 20px 20px;
+  margin-top: 100px; /* Adjust based on the navbar height */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 120px auto 0;
+}
+
+/* Search Form */
+#searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Search Input and Button */
+#searchInput {
+  padding: 10px;
+  width: 70%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #231651;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+button:hover {
+  background-color: #070410;
+}
+
+/* Results Section */
+#results {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.recipe-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  #searchInput {
+    width: 60%;
+  }
+
+  .recipe-card {
+    width: 100%;
+  }
+
+  header {
+    margin: 100px 20px 0;
+  }
+}

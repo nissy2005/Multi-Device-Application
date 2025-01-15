@@ -1,0 +1,24 @@
+{
+    "name": "recipe-backend",
+    "version": "1.0.0",
+    "description": "Recipe Finder Backend",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.13.23"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    },
+    "author": "Your Name",
+    "license": "ISC"
+}

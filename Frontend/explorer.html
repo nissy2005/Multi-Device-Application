@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Explorer</title>
+  <link rel="stylesheet" href="explorer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">Recipe Finder</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Recipe Search</a></li>
+      <li><a href="explorer.html">Recipe Explorer</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <section class="explore-header">
+    <h1>Explore Delicious Recipes</h1>
+    <p>Search and discover a wide range of recipes based on your preferences.</p>
+  </section>
+
+  <!-- Search and Filter Section -->
+  <section class="explore-search">
+    <input type="text" id="exploreSearchInput" placeholder="Search by ingredient, recipe name..." required>
+    <select id="filterCategory">
+      <option value="all">All Categories</option>
+      <option value="vegan">Vegan</option>
+      <option value="dessert">Dessert</option>
+      <option value="appetizer">Appetizer</option>
+    </select>
+    <button id="searchButton">Search</button>
+  </section>
+
+  <!-- Recipe Grid Section -->
+  <section id="exploreResults" class="recipe-grid">
+    <!-- Example Recipe Card -->
+    <div class="recipe-card">
+      <img src="cake.jpg" alt="Recipe Image">
+      <h3>Recipe Name</h3>
+      <p>Description of the recipe or ingredients used.</p>
+      <a href="#">View Recipe</a>
+    </div>
+    <!-- More Recipe Cards will be dynamically added here -->
+  </section>
+
+  <!-- Load More Button -->
+  <button id="loadMoreButton">Load More</button>
+
+  <script src="explorer.js"></script>
+</body>
+</html>

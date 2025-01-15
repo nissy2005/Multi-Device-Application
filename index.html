@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="/Frontend/index.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">Recipe Finder</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Recipe Search</a></li>
+      <li><a href="./Frontend/explorer.html">Recipe Explorer</a></li>
+    </ul>
+    <div class="sign-in">
+      <a href="./Frontend/signin.html" class="sign-in-btn">Sign In</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Find Your Recipe</h1>
+    <form id="searchForm">
+      <input type="text" id="searchInput" placeholder="Enter ingredient..." required>
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <section id="results">
+    <!-- Dynamic content will be inserted here -->
+  </section>
+
+  <script src="./Frontend/script.js"></script>
+</body>
+</html>

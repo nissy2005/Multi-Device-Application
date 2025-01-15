@@ -1,0 +1,210 @@
+/* General Styling */
+
+
+body, html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #231651;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-family: 'Lobster', cursive; /* Apply Lobster font only to the logo */
+    color: white;
+    position: absolute;
+    left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #4DCCBD;
+}
+
+/* Header Section with Faded Background Image */
+.explore-header {
+    text-align: center;
+    background-image: url('food.jpg'); /* Add the background image here */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    margin-top: 60px;
+    border-bottom: 2px solid #e0e0e0;
+    color: white;
+    position: relative; /* Needed to place the overlay on top */
+    z-index: 0; /* Ensure the header is below the overlay */
+}
+
+/* Faded Overlay */
+.explore-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay with 60% opacity */
+    z-index: -1; /* Ensure overlay is behind text */
+}
+
+/* Change Font for Header Text */
+.explore-header h1 {
+    font-family: 'Roboto', sans-serif; /* Change font here */
+    font-size: 36px;
+    margin-bottom: 10px;
+    z-index: 1; /* Keep the text above the overlay */
+}
+
+.explore-header p {
+    font-size: 18px;
+    color: #f4f4f4; /* Adjust text color to blend with background */
+    z-index: 1; /* Keep the text above the overlay */
+}
+
+/* Search and Filter Section */
+.explore-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+#exploreSearchInput, #filterCategory, #searchButton {
+    padding: 12px;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+#exploreSearchInput {
+    width: 50%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#filterCategory {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#searchButton {
+    background-color: #231651;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #070410;
+}
+
+/* Recipe Grid Section */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    justify-items: center; /* Center the grid items */
+}
+
+.recipe-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.recipe-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.recipe-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.recipe-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #231651;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.recipe-card a:hover {
+    background-color: #4DCCBD;
+}
+
+/* Pagination/Load More Button */
+#loadMoreButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #231651;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loadMoreButton:hover {
+    background-color: #070410;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #exploreSearchInput {
+        width: 80%;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+
